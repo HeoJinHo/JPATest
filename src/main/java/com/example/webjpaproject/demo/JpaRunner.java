@@ -29,7 +29,7 @@ public class JpaRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception{
         postRepository.findAll().forEach(System.out::println);
 
-        
+
 //        Account account = new Account();
 //
 //        account.setUsername("jhheo");
