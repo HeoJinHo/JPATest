@@ -5,6 +5,6 @@ import java.util.List;
 public interface AccountMVIm {
 
 
-    List<Account> accountSearch ();
+    Account accountSearch (Account account);
 
 }

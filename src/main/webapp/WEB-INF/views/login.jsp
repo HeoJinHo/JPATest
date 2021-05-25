@@ -13,6 +13,18 @@
 </head>
 <body>
 
+
+<form action="/next" method="post">
+    <input type="text" name="username">
+    <input type="text" name="password">
+
+    <button type="submit">Next</button>
+</form>
+
+
+
+
+
     <table>
         <c:forEach var="item" items="${data}">
             <tr>
