@@ -4,6 +4,9 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,6 +31,14 @@ public class JpaRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception{
         postRepository.findAll().forEach(System.out::println);
+
+        Post post = new Post();
+
+        post.setTitle("Start");
+
+        postRepository.findAllByTitleLike(post.getTitle()).forEach(System.out::println);
+
+
 
 
 //        Account account = new Account();
